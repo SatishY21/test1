@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function capital() {
+            var country = document.forms["form1"].country.value;
+            var capital = "Select any country";
+
+            if (country == "INDIA") {
+                capital = "DELHI";
+            }
+            if (country == "USA") {
+                capital = "W DC";
+            }
+            if (country == "RUSSIA") {
+                capital = "MOSCOW";
+            }
+
+            document.getElementById("capt").innerHTML = capital;
+        }
+    </script>
+</head>
+
+<body>
+    <center>
+        <form name="form1">
+            <div>
+                <p>Select a country:
+                    <select name="country" onchange="capital()">
+                        <option value="select">--SELECT--</option>
+                        <option value="INDIA">INDIA</option>
+                        <option value="USA">USA</option>
+                        <option value="RUSSIA">RUSSIA</option>
+                    </select>
+                </p>
+            </div>
+            <div>
+                <h3 style="color: green;">Capital is:</h3>
+                <p id="capt" style="color: red;"></p>
+            </div>
+        </form>
+    </center>
+</body>
+
+</html>
